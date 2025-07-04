@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "docker" {
-  host = "unix:///Users/joseskunnel/.colima/default/docker.sock"
+  host = "unix:///var/run/docker.sock"
 }
 	
 resource "docker_image" "nginx" {
