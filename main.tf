@@ -9,8 +9,10 @@ terraform {
   }
 }
 
-provider "docker" {}
-
+provider "docker" {
+  host = "unix:///Users/joseskunnel/.colima/default/docker.sock"
+}
+	
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
   keep_locally = false
