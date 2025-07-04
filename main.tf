@@ -9,9 +9,7 @@ terraform {
   }
 }
 
-provider "docker" {
-  host = "unix:///var/run/docker.sock"
-}
+provider "docker" {}
 	
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
